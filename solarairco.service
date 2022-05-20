@@ -1,0 +1,15 @@
+[Unit]
+Description=SolarAirco
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5
+User=nhooijenga
+ExecStart=/plex/SolarAirco/start.sh
+SyslogIdentifier=solarminer
+
+[Install]
+WantedBy=mutli-user.target
